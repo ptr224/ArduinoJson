@@ -131,29 +131,7 @@
 #  endif
 #endif
 
-#ifdef ARDUINO
-
-// Enable support for Arduino's String class
-#  ifndef ARDUINOJSON_ENABLE_ARDUINO_STRING
-#    define ARDUINOJSON_ENABLE_ARDUINO_STRING 1
-#  endif
-
-// Enable support for Arduino's Stream class
-#  ifndef ARDUINOJSON_ENABLE_ARDUINO_STREAM
-#    define ARDUINOJSON_ENABLE_ARDUINO_STREAM 1
-#  endif
-
-// Enable support for Arduino's Print class
-#  ifndef ARDUINOJSON_ENABLE_ARDUINO_PRINT
-#    define ARDUINOJSON_ENABLE_ARDUINO_PRINT 1
-#  endif
-
-// Enable support for PROGMEM
-#  ifndef ARDUINOJSON_ENABLE_PROGMEM
-#    define ARDUINOJSON_ENABLE_PROGMEM 1
-#  endif
-
-#else  // ARDUINO
+// Remove Arduino dp
 
 // Disable support for Arduino's String class
 #  ifndef ARDUINOJSON_ENABLE_ARDUINO_STRING
@@ -178,8 +156,6 @@
 #      define ARDUINOJSON_ENABLE_PROGMEM 0
 #    endif
 #  endif
-
-#endif  // ARDUINO
 
 // Convert unicode escape sequence (\u0123) to UTF-8
 #ifndef ARDUINOJSON_DECODE_UNICODE
